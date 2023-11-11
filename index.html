@@ -98,20 +98,21 @@ p {line-height: 2}
 </div>
 
 <!-- Wedding information -->
-<div class="w3-container w3-padding-64 w3-pale-green w3-grayscale-min w3-center" id="wedding">
+<div class="w3-container w3-padding-64 w3-grayscale-min w3-center" style="background-color:azure;" id="wedding">
   <div class="w3-content">
-    <h1 class="w3-text-grey"><b>THE WEDDING</b></h1>
+    <h1 style="font-family: roseritta;"><b>THE WEDDING</b></h1>
     <div class="w3-row">
       <div class="w3-half">
-        <h2>When</h2>
-        <p>Wedding Ceremony - 2:00pm</p>
-        <p>Reception & Dinner - 5:00pm</p>
+        <h2 style="font-family: roseritta;">When</h2>
+        <p style="font-family: stmarie;"><b>Wedding Ceremony: 4:30pm</b></p>
+        <p style="font-family: stmarie;"><b>Reception & Dinner - 5:00pm</b></p>
       </div>
       <div class="w3-half">
-        <h2>Where</h2>
-        <p>Dickerson Wedding Venue
-          7901 Comus Road
-          Dickerson, Maryland 20842</p>
+        <h2 style="font-family: roseritta;">Where</h2>
+        <p style="font-family: stmarie;">Re'em
+          @Helen & Joey Estate</br>
+          14 Spring Ln, Gruyere VIC 3770
+        </p>
 
       </div>
     </div>
@@ -119,41 +120,59 @@ p {line-height: 2}
   </div>
 
 <!-- RSVP section -->
-<div class="w3-container w3-padding-64 w3-pale-green w3-center w3-wide" id="rsvp">
-  <h1>HOPE YOU CAN MAKE IT!</h1>
-  <p class="w3-large">Kindly Respond By December, 2020</p>
-  <p class="w3-xlarge">
-    <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-round w3-white w3-opacity w3-hover-opacity-off" style="padding:8px 60px; box-shadow: 2px 2px #000000;">RSVP</button>
+<div class="w3-container w3-padding-64 w3-center w3-wide" style="background-color: darkgrey;" id="rsvp">
+  <h1 class="w3-center" style="font-family: roseritta">HOPE YOU CAN MAKE IT!</h1>
+  <p class="w3-large" style="font-family: stmarie;"><i>Kindly Respond By February, 2024</i></p>
+  <p class="w3-xxlarge">
+    <button
+      onclick="document.getElementById('id01').style.display='block'"
+      class="w3-button w3-round w3-white w3-opacity w3-hover-opacity-off"
+      style="font-family: stmarie; padding:1px 180px; box-shadow: 2px 2px #000000;"
+    >
+      <b>RSVP</b>
+    </button>
   </p>
 </div>
 
-<!-- RSVP modal -->
-<div id="id01" class="w3-modal">
-  <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="padding:32px;max-width:600px">
-    <div class="w3-container w3-white w3-center">
-      <h1 class="w3-wide">CAN YOU COME?</h1>
-      <p>We really hope you can make it.</p>
-      <form>
-        <input class="w3-input w3-border" type="text" placeholder="Name(s)" name="name">
-      </form>
-      <p><i>Sincerely, Alice & Jeremy</i></p>
-      <div class="w3-row">
-        <div class="w3-half">
-          <button onclick="document.getElementById('id01').style.display='none'" type="button" class="w3-button w3-block w3-green">Going</button>
-        </div>
-        <div class="w3-half">
-          <button onclick="document.getElementById('id01').style.display='none'" type="button" class="w3-button w3-block w3-red">Can't come</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+<div class="w3-hide-small" style="margin-bottom:32px"> </div> -->
+<div id="root"></div>
+<script type="text/babel">
+  const {
+    Stack,
+    Button,
+    ButtonGroup,
+    Box,
+  } = MaterialUI;
 
-<!-- Footer -->
-<footer class="w3-center w3-black w3-padding-16">
-  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
-</footer>
-<div class="w3-hide-small" style="margin-bottom:32px"> </div>
+  function SimpleButtonGroup() {
+    return (
+      // a box on the bottom of the screen
+      <Box
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          width: '100%',
+          // on the bottom of the page
+          position: 'fixed',
+          bottom: 0,
 
+          alignItems: 'center',
+          '& > *': {
+            m: 1,
+          },
+        }}
+      >
+      <ButtonGroup variant="text" aria-label="text button group">
+        <Button>Home</Button>
+        <Button>Invitation</Button>
+        <Button>Wedding</Button>
+        <Button>RSVP</Button>
+      </ButtonGroup>
+      </Box>
+    );
+  }
+  const root = ReactDOM.createRoot(document.getElementById('root'));
+  root.render(<SimpleButtonGroup />);
+</script>
 </body>
 </html>
