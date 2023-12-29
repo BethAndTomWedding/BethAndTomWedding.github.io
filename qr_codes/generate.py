@@ -43,7 +43,7 @@ def add_logo(logo_fpath: str, qr_code_fpath: str, ofpath: str):
     image.save(ofpath)
 
 generate_qr(
-    text='https://bethandtomwedding.github.io/',
+    text='https://bethandtomwedding.github.io',
     ofpath='qr_codes/qr_website.png',
 )
 add_logo(
