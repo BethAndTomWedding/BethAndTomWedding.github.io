@@ -980,5 +980,55 @@
         document.getElementById('h').innerHTML = "<h1>clicked table!</h1>";
       }, true);
     </script>
+  <table>
+   <caption>
+     Wedding seating chart
+   </caption>
+   <thead>
+     <tr>
+       <th>First Name</th>
+       <th>Surname</th>
+     </tr>
+   </thead>
+   <tbody>
+     <tr>
+       <th><button id="button">Tom</button></th>
+       <td>Husband</td>
+     </tr>
+     <tr>
+       <th>Beth</th>
+       <td>Wife</td>
+     </tr>
+     <tr>
+       <th>Dan</th>
+       <td>Best Man</td>
+     </tr>
+     <tr>
+       <th>Jill</th>
+       <td>Maid of Honour</td>
+     </tr>
+   </tbody>
+   <tfoot>
+     <tr>
+       <th colspan="3">Enjoy!</th>
+     </tr>
+   </tfoot>
+ </table>
+ <script type="text/javascript">
+   document.getElementById('button').addEventListener('click', function (event) {
+     console.log("button!!");
+     document.getElementById('h').innerHTML = "<h1>clicked person!</h1>";
+     
+     document.getElementById('circle70').style.fill = "red";
+     document.getElementById('rect213').style.fill = "red";
+   }, true);
+   document.getElementById('button').addEventListener('touchend', function (event) {
+     console.log("button!!");
+     document.getElementById('h').innerHTML = "<h1>clicked person!</h1>";
+     
+     document.getElementById('circle70').style.fill = "red";
+     document.getElementById('rect213').style.fill = "red";
+   }, true);
+ </script>
 </body>
 </html>
