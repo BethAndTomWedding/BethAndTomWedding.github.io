@@ -3,7 +3,7 @@
 <head>
 </head>
 <body>
-    <h1>This is the seating chart woohoo!</h1>
+    <h1 id="h">This is the seating chart woohoo!</h1>
     <svg
        width="296.99997mm"
        height="210mm"
@@ -968,9 +968,16 @@
       </g>
     </svg>
     <script type="text/javascript">
-      document.getElementById('rect57').addEventListener('touchstart', function (event) {
+      document.getElementById('rect57').addEventListener('touchend', function (event) {
         console.log("click!!");
         alert("tapped table!");
+        document.getElementById('h').innerHTML = "<h1>tapped table!</h1>";
+
+      }, true);
+      document.getElementById('rect57').addEventListener('click', function (event) {
+        console.log("click!!");
+        alert("tapped table!");
+        document.getElementById('h').innerHTML = "<h1>clicked table!</h1>";
       }, true);
     </script>
 </body>
