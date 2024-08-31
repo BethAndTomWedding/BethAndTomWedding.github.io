@@ -742,7 +742,9 @@
          cy="187.25201"
          r="14.557955"
          onclick="1"
-         onmouseover="1" />
+         onmouseover="1">
+        <animate attributeName="rx" values="0;5;0" dur="10s" repeatCount="indefinite" />
+      </circle>
       <circle
          style="fill:#fa8f53;fill-opacity:0.879518;stroke:#000000;stroke-width:1.83464;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
          id="circle227"
@@ -886,9 +888,10 @@
          id="circle250"
          cx="650.97821"
          cy="187.25201"
+         onmouseover=""
+         onmouseout=""
          r="14.557955"
-         onmouseover="fill:&quot;green&quot;"
-         onmouseout="fill:&quot;red&quot;" />
+         onclick="element.style.fill= 'green';" />
       <circle
          style="fill:#fa8f53;fill-opacity:0.879518;stroke:#000000;stroke-width:1.83464;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
          id="circle251"
