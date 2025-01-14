@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
-<style>
-@font-face {
-    font-family: "roseritta";
-    src: url("./Roseritta.otf") format("truetype");
-}
-@font-face {
-    font-family: "stmarie";
-    src: url("./StMarie-Thin.otf") format("truetype");
-}
-</style>
 <svg id="svg82" width="1189mm" height="841mm" version="1.1" viewBox="0 0 4493.9 3178.6" xmlns="http://www.w3.org/2000/svg">
+  <style>
+  @font-face {
+      font-family: "roseritta";
+      src: url("./Roseritta.otf") format("truetype");
+  }
+  @font-face {
+      font-family: "stmarie";
+      src: url("./StMarie-Thin.otf") format("truetype");
+  }
+  </style>
   <g id="layer1" transform="translate(12.782 -62.19)" stroke-dashoffset="13.81">
     <text id="text1" x="2217.6643" y="524.09302" font-size="242.16px" letter-spacing="5.6519px" stroke-width="11.076" text-align="center" style="fill:#000000;font-family:roseritta;font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal;stroke:#000000;text-anchor:middle" xml:space="preserve"><tspan id="tspan1" x="2220.4902" y="524.09302" font-family="roseritta" font-size="242.16px" stroke-width="11.076" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal">Find your seat</tspan></text>
     <text id="text4" x="3600.8174" y="972.84259" text-align="center" style="fill:#000000;font-family:roseritta;font-size:279.11px;font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal;letter-spacing:2px;stroke-width:3.9194;stroke:#000000;text-anchor:middle" xml:space="preserve"><tspan id="tspan4" x="3601.8174" y="972.84259" font-family="roseritta" font-size="279.11px" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal">3</tspan></text>
