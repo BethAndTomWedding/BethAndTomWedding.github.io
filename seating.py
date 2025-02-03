@@ -42,13 +42,29 @@ print(tables_in_svg)
 # update the SVG with the invitees ----------------
 
 for table_n in list(map(str, range(1,4))):
+    n_seats_l, n_seats_r = map(len, tables_to_apply[table_n].values())
+    n_seats_missing = {'L': n_seats_r-n_seats_l, 'R': n_seats_l-n_seats_r}
+
     for side in ['L', 'R']:
         seats_in_svg = tables_in_svg[table_n][side].find_all('text')
         seats_to_apply = tables_to_apply[table_n][side]
 
-        for seat_in_svg, seat_to_apply in zip(seats_in_svg, seats_to_apply):
-            seat_in_svg.find('tspan').string = seat_to_apply
+        seat_y_positions = []
+        for seat in seats_in_svg:
+            seat_y_positions.append(float(seat.find('tspan').attrs['y']))
+
+        print(seat_y_positions)
+
+        from itertools import pairwise
+        differences = [0]+[y-x for (x, y) in pairwise(seat_y_positions)]
+
+        for i, (seat_in_svg, seat_to_apply) in enumerate(zip(seats_in_svg, seats_to_apply)):
+            # set the name of the seat
+            tspan = seat_in_svg.find('tspan')
+            tspan.string = seat_to_apply
             print(f'{seat_to_apply=} > {seat_in_svg=}\n')
+            # set the position of the seat (if the sides have uneven numbers)
+            tspan.attrs['y'] = str(float(tspan.attrs['y']) + differences[i] * n_seats_missing[side] / 2)
 
 print(soup, file=open(svg_ofpath, 'w'))
 
