@@ -10,6 +10,10 @@
       font-family: "stmarie";
       src: url("./StMarie-Thin.otf") format("truetype");
   }
+  @font-face {
+      font-family: "anandablack";
+      src: url("./AnandaBlackPersonalUseRegular-rg9Rx.ttf") format("truetype");
+  }
   </style>
   <g id="layer1" transform="translate(12.782 -62.19)" stroke-dashoffset="13.81">
     <text id="text1" x="2217.6643" y="524.09302" font-size="242.16px" letter-spacing="5.6519px" stroke-width="11.076" text-align="center" style="fill:#000000;font-family:roseritta;font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal;stroke:#000000;text-anchor:middle" xml:space="preserve"><tspan id="tspan1" x="2220.4902" y="524.09302" font-family="roseritta" font-size="242.16px" stroke-width="11.076" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal">Find your seat</tspan></text>
